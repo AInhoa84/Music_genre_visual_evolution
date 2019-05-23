@@ -65,9 +65,10 @@ def remove_refs(text):
 
 def get_country_state_city(text):
     """ Return a list of the form [city, state, [list of countries]]. """
-    s = remove_refs(text).split(",")
-    city = " "
-    state = " "
+    i = remove_refs(text)
+    s = i.split(",")
+    city = ""
+    state = ""
     country = get_country(s[-1])
 
     if country == ["United States"]:
@@ -86,11 +87,9 @@ def get_country_state_city(text):
 
     return [city, state, country]
 
-
-
-if __name__ == "__main__":
-    df = pd.read_csv("Chunks_completed/chunk1.csv", sep='\t', header=0, encoding='utf-8')
-    #count_countries(df)
-    for i in df["birth_place"]:
-        if type(i) == type(str()):
-           print(get_country_state_city(i))
+empty_list = ["","",[""]]
+def get_country_state_city_check(text):
+    if type(text) == type(str()):
+        return get_country_state_city(text)
+    else:
+        return empty_list
