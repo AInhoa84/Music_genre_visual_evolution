@@ -57,7 +57,7 @@ def retrieve_metadata_first_round(a, b):
 
     for j in range(a, b):
         print('Starting with chunk {}: '.format(j))
-        df = pd.read_csv('Chunks/first_round/chunk{}.csv'.format(j), sep='\t')
+        df = pd.read_csv('Data_out/Chunks/first_round/chunk{}.csv'.format(j), sep='\t')
         df['name_formatted'] = df['name_formatted'].str.strip()
         df['birth_place'] = np.nan
         df['genre'] = np.nan 
@@ -66,23 +66,23 @@ def retrieve_metadata_first_round(a, b):
             list_ = get_1_artist(artist)
             df['birth_place'][i] = list_[1]
             df['genre'][i] = list_[2]
-        df.to_csv('Chunks_completed/first_round/chunk{}.csv'.format(j), sep='\t', index=False, encoding='utf-8')
+        df.to_csv('Data_out/Chunks_completed/first_round/chunk{}.csv'.format(j), sep='\t', index=False, encoding='utf-8')
 
 
 def retrieve_metadata_second_round(a, b):
     """For any files containing the artist name in a column called "name_formatted", reads the file, retrieves the artists origin and music genre, and saves a new file with the data"""
     for j in range(a, b):
         print('Starting with chunk {}: '.format(j))
-        df = pd.read_csv('Chunks/second_round/chunk{}.csv'.format(j), sep='\t')
-        df['name_formatted'] = df['name_formatted'].str.strip()
+        df = pd.read_csv('Data_out/Chunks/second_round/chunk{}.csv'.format(j), sep='\t')
+        df['artist_name'] = df['artist_name'].str.strip()
         df['birth_place'] = np.nan
         df['genre'] = np.nan 
         for i in tqdm.tqdm(range(len(df))):
-            artist = str(df['name_formatted'][i])
+            artist = str(df['artist_name'][i])
             list_ = get_1_artist(artist)
             df['birth_place'][i] = list_[1]
             df['genre'][i] = list_[2]
-        df.to_csv('Chunks_completed/second_round/chunk{}.csv'.format(j), sep='\t', index=False, encoding='utf-8')
+        df.to_csv('Data_out/Chunks_completed/second_round/chunk{}.csv'.format(j), sep='\t', index=False, encoding='utf-8')
 
 
 def reverse(name):
@@ -112,35 +112,35 @@ def get_1_artist(artist):
 def concat_chunks_first_round(a, b):
     """For any number of chunks in the folder "Chunks_completed": concatenates all of them and exports them to a single csv file"""
     
-    main_df = pd.read_csv('Chunks_completed/first_round/chunk{}.csv'.format(a), sep='\t', header=0, encoding='utf-8')
+    main_df = pd.read_csv('Data_out/Chunks_completed/first_round/chunk{}.csv'.format(a), sep='\t', header=0, encoding='utf-8')
     
     for j in tqdm.tqdm(range(a+1, b)):
-        df = pd.read_csv('Chunks_completed/first_round/chunk{}.csv'.format(j), sep='\t', header=0, encoding='utf-8')
+        df = pd.read_csv('Data_out/Chunks_completed/first_round/chunk{}.csv'.format(j), sep='\t', header=0, encoding='utf-8')
         df1 = pd.concat([main_df, df], ignore_index=True)
         main_df = df1
         
-    main_df.to_csv('Wikipedia_chunks_all_first_round.csv', sep='\t', index=False, encoding='utf-8')
+    main_df.to_csv('Data_out/Wikipedia_chunks_all_first_round.csv', sep='\t', index=False, encoding='utf-8')
 
 
 
 def concat_chunks_second_round(a, b):
     """For any number of chunks in the folder "Chunks_completed": concatenates all of them and exports them to a single csv file"""
     
-    main_df = pd.read_csv('Chunks_completed/second_round/chunk{}.csv'.format(a), sep='\t', header=0, encoding='utf-8')
+    main_df = pd.read_csv('Data_out/Chunks_completed/second_round/chunk{}.csv'.format(a), sep='\t', header=0, encoding='utf-8')
     
     for j in tqdm.tqdm(range(a+1, b)):
-        df = pd.read_csv('Chunks_completed/second_round/chunk{}.csv'.format(j), sep='\t', header=0, encoding='utf-8')
+        df = pd.read_csv('Data_out/Chunks_completed/second_round/chunk{}.csv'.format(j), sep='\t', header=0, encoding='utf-8')
         df1 = pd.concat([main_df, df], ignore_index=True)
         main_df = df1
         
-    main_df.to_csv('Wikipedia_chunks_all_second_round.csv', sep='\t', index=False, encoding='utf-8')
+    main_df.to_csv('Data_out/Wikipedia_chunks_all_second_round.csv', sep='\t', index=False, encoding='utf-8')
 
 def splitdf_1st(df, chunksize = 1000): 
     listdf = list()
     number_chunks = len(df) // chunksize + 1
     for i in range(number_chunks):
         listdf.append(df[i*chunksize:(i+1)*chunksize])
-        df[i*chunksize:(i+1)*chunksize].to_csv('Chunks/first_round/chunk{}.csv'.format(i), sep='\t', index=False, encoding='utf-8')
+        df[i*chunksize:(i+1)*chunksize].to_csv('Data_out/Chunks/first_round/chunk{}.csv'.format(i), sep='\t', index=False, encoding='utf-8')
 
 
 def splitdf_2nd(df, chunksize = 1000): 
@@ -148,6 +148,6 @@ def splitdf_2nd(df, chunksize = 1000):
     number_chunks = len(df) // chunksize + 1
     for i in range(number_chunks):
         listdf.append(df[i*chunksize:(i+1)*chunksize])
-        df[i*chunksize:(i+1)*chunksize].to_csv('Chunks/second_round/chunk{}.csv'.format(i), sep='\t', index=False, encoding='utf-8')
+        df[i*chunksize:(i+1)*chunksize].to_csv('Data_out/Chunks/second_round/chunk{}.csv'.format(i), sep='\t', index=False, encoding='utf-8')
 
 

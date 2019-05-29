@@ -36,7 +36,7 @@ def get_country(text):
 
 def get_us_state(text):
     """ Get US state based on a predefined list. """
-    states_df = pd.read_csv("USA_states.csv", sep='\t', header=0)
+    states_df = pd.read_csv("Data_out/USA_states.csv", sep='\t', header=0)
 
     for i in states_df["subdivision"]:
         if i in text:
