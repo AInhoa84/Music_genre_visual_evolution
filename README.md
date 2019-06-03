@@ -44,4 +44,4 @@ In order to follow the whole process, there is a specific order to execute the n
 
 **<u>6 -Credits </u>**
 
-This project is based mainly in MusicBrainz's database. It has been complemented by The Million Song Dataset, Wikidata and Wikipedia.
+This project is based mainly in MusicBrainz's database. It has been complemented by The Million Song Dataset, Wikidata and Wikipedia. The music genre list has been inspired from https://www.musicgenreslist.com/.
