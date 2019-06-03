@@ -40,3 +40,8 @@ In order to follow the whole process, there is a specific order to execute the n
 
 
 **<u>5 -Project summary/conclusions </u>**
+
+
+**<u>6 -Credits </u>**
+
+This project is based mainly in MusicBrainz's database. It has been complemented by The Million Song Dataset, Wikidata and Wikipedia.
