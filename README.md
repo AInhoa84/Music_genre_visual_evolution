@@ -136,7 +136,7 @@ Anaconda virtual environment with Python 3.7 and the following libraries/package
 - wikipedia (pip install wikipedia)
 - requests
 - json
-- pycountry
+- pycountry (pip install pycountry)
 
 
 *The API key is not required if you don't intend to geocode the locations. The geocoded locations file will be provided.
