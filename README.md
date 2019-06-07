@@ -137,6 +137,8 @@ Anaconda virtual environment with Python 3.7 and the following libraries/package
 - requests
 - json
 - pycountry
+
+
 *The API key is not required if you don't intend to geocode the locations. The geocoded locations file will be provided.
 
 For the visualization, it is advised to download the latest version of Tableau Public (2019.2 or later) and run the dashboard locally in your computer (the interactive map doesn't render in the online version). You will need to have Tableau Public login details to be able to do that.
