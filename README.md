@@ -130,7 +130,7 @@ Anaconda virtual environment with Python 3.7 and the following libraries/package
 - warnings
 - seaborn
 - matplotlib
-- reverse_geocoder (pip install reverse geocoder)
+- reverse_geocoder (pip install reverse_geocoder)
 - re
 - datetime
 - wikipedia (pip install wikipedia)
