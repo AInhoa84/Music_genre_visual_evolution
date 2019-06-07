@@ -3,13 +3,13 @@
 
 Welcome to my first Data Science project!
 
-This project is a data gathering challenge. In order to make the initial idea possible, many data sources and different tools were used to get the right amount of data and in a suitable format. 
+This project is a data gathering challenge: in order to make the initial idea possible, many data sources and different tools were used to get the right amount of data and in a suitable format. 
 
-This documents sums up in a very brief way all the work done. In order to really understand the different steps it's advised to look at the notebooks and Python scripts.
+This document sums up in a very brief way all the work done. In order to really understand the different steps it's advised to look at the notebooks and Python scripts.
 
 The main goal of this project was to show, in an interactive map, how the different music genres evolved over time and geography: where they started, and how they expanded over the years.
 
-There are many websites/articles which explain the evolution of the different music genres over time, but they mainly focused on the relationships between genres and how the combination of some of them led to the inception of new ones. Only a few ones introduced the geographical factor and used it to make a visualization, but, as far as I have seen, they are limited to the US territory. 
+There are many websites/articles explaining the evolution of the different music genres over time, but they mainly focus on the relationships between genres and how the combination of some of them led to the inception of new ones. Only a few ones introduced the geographical factor and used it to make a visualization, but, as far as I have seen, they are limited to the US territory. 
 
 A few online music databases were analyzed and tested (this process took about a month), before deciding that MusicBrainz would be the main data source for this project. MusicBrainz database seemed very complete and up-to-date and there were enough tables and records to retrieve:
 
