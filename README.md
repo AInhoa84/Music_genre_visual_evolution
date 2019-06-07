@@ -3,7 +3,7 @@
 
 Welcome to my first Data Science project!
 
-This Data Science project is a data gathering challenge. In order to make the initial idea possible, many data sources and different tools were used to get the right amount of data and in a suitable format. 
+This project is a data gathering challenge. In order to make the initial idea possible, many data sources and different tools were used to get the right amount of data and in a suitable format. 
 
 This documents sums up in a very brief way all the work done. In order to really understand the different steps it's advised to look at the notebooks and Python scripts.
 
