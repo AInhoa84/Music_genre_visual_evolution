@@ -151,11 +151,11 @@ Extract them into the repository folder.
 
 In order to follow the whole process, there is a specific order to execute the notebooks:
 
-Areas_Musicbrainz: this notebook prepares the area codes from Musicbrainz database and the resulting file is used in the next notebook.
-Data_gathering_releases_origin: this notebook retrieves the origin for each release. The resulting file is used in the next notebook.
-Data_gathering_music_genre: this notebook takes as input the output from the previous notebook and focuses on the music genre for each release.
-Wikipedia_artist_information_retrieval: this is an auxiliary notebook. It assists notebooks 2 & 3 in their final steps.
-Data analysis: this notebook analyzes the final dataframe and formats it before loading it with the visual tool.
+- 1: Areas_Musicbrainz: this notebook prepares the area codes from Musicbrainz database and the resulting file is used in the next notebook.
+- 2: Data_gathering_releases_origin: this notebook retrieves the origin for each release. The resulting file is used in the next notebook.
+- 3: Data_gathering_music_genre: this notebook takes as input the output from the previous notebook and focuses on the music genre for each release.
+- 4: Wikipedia_artist_information_retrieval: this is an auxiliary notebook. It assists notebooks 2 & 3 in their final steps.
+- 5: Data analysis: this notebook analyzes the final dataframe and formats it before loading it with the visual tool.
 
 
 
