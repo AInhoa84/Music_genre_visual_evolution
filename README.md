@@ -145,11 +145,7 @@ For the visualization, it is advised to download the latest version of Tableau P
 
 ### 2 - Data folders
 
-Once you've downloaded/cloned the repository in your PC, download the two data folders (Data_in & Data_out) from the following link:
-
-https://drive.google.com/drive/folders/1PMlyqU2ruE8SyGH8qQNxXY29Cfvmg9jC?usp=sharing
-
-Extract them into the repository folder.
+To be updated
 
 ### 3 - Notebook's order
 
