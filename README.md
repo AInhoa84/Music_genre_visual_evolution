@@ -145,7 +145,7 @@ For the visualization, it is advised to download the latest version of Tableau P
 
 ### 2 - Data folders
 
-To be updated
+Contact me to get the data folders
 
 ### 3 - Notebook's order
 
